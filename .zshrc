@@ -62,9 +62,16 @@ alias ls='lsd --group-dirs=first'
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Functions
+function rmk(){ 			# Remove files more securely
+	scrub -p dod $1
+	shred -zun 10 -v $1
+}
+
 # Load p10k theme
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
+# Load nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
