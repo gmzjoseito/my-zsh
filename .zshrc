@@ -67,8 +67,3 @@ function rmk(){ 			# Remove files more securely
 
 # Load p10k theme
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-# Load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
